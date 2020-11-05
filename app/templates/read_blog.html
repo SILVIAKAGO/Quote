@@ -1,0 +1,73 @@
+{%extends 'base.html'%}
+{%import "bootstrap/wtf.html" as wtf%}
+{%block content%}
+<div class="container-fluid">
+  {%if current_user.is_authenticated%}
+  <div id="jumbo" class="jumbotron bg-dark">
+    <h1>{{data}} <code>Admin mode</code></h1>
+    <button id="dele" class="btn btn-outline-danger" type="button" name="button">Click here if you want to delete your
+      blog</button>
+    <div class="del animated fadeIn">
+      {{wtf.quick_form(deleform)}}
+    </div>
+  </div>
+  {%endif%}
+  <div class="row">
+    <div class="col-md-8">
+      <div class="jumbo jumbotron">
+        <h1 id="tutor">{{data}} Tutorial</h1>
+      </div>
+      <div class="container">
+        <p>{{format_blog|safe}}</p>
+        <br>
+        <hr class="bg-info">
+        <div class="">
+          {%for con in blogComment%}
+          <div class="comments card">
+            <div class="card-header">
+              <p>{{con.username}} commented on {{con.posted}}</p>
+            </div>
+            <div class="card-body">
+              <p>{{con.comment}}</p>
+            </div>
+            <div class="card-footer">
+              {%if current_user.is_authenticated%}
+              <p>Admin session</p>
+              {%endif%}
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+              <a id="write" class="btn btn-outline-default">Write a comment</a>
+              <div class="com">
+                <br>
+                <br>
+                <i class="alert alert-info"><b>Thank you for subscribing</b></i>
+                <br>
+                <br>
+                {{wtf.quick_form(comments)}}
+              </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="fixed" class="col-md-4">
+      <h1>Tutorials</h1>
+      <hr class="bg-success">
+      <ul class="list-group">
+        {%for blog in blogs%}
+        <li class="list-group-item"><a href="/read_blog/title/{{blog.id}}/">{{blog.title}}</a></li>
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+</div>
+{%endblock%}

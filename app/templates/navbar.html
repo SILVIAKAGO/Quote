@@ -1,0 +1,46 @@
+<!--Navbar -->
+<nav  class="mb-1 navbar navbar  navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">music</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+     
+      {%if current_user.is_authenticated%}
+      <li class="nav-item">
+
+        <a class="nav-link" href="{{url_for('main.new_blog')}}">Post A new Blog</a>
+      </li>
+      {%endif%}
+    
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      {%if current_user.is_authenticated%}
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class=""></i>
+        </a>
+      </li>
+      <li class="nav-item avatar dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">{{current_user.username}}
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
+          aria-labelledby="navbarDropdownMenuLink-55">
+          <a class="dropdown-item" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a>
+          <a class="dropdown-item" href="{{url_for('auth.logout')}}">Log Out</a>
+          {%else%}
+          <a class="dropdown-item" href="{{url_for('auth.login')}}">sign in</a>
+          {%endif%}
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
