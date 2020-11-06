@@ -21,7 +21,7 @@ This is a Personal blog web application developed using flask framework and pyth
 * run this command on terminal `python3.8 manage.py server`
 * The application should work
 
-## Known Bugs
+## Known Bugs.
 
 NO known bugs as at the moment.
 
