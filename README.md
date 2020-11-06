@@ -38,7 +38,7 @@ NO known bugs as at the moment.
 
 get me at deejaykayslyk@gmail.com
 
-### License
+### License.
 
 MIT License <br>
 Copyright (c) 2020 | ** Silvia Kago**
