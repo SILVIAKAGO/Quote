@@ -3,7 +3,7 @@
 
 #### This is a Python web application using Flask framework and Postgresql.
 
-# Author
+# Author.
 ## SILVIA KAGO
 
 ## Description
