@@ -34,7 +34,7 @@ NO known bugs as at the moment.
 * CSS
 * PostgreSQL Database
 
-## Contact details
+## Contact details.
 
 get me at deejaykayslyk@gmail.com
 
