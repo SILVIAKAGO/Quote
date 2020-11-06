@@ -33,7 +33,7 @@ NO known bugs as at the moment.
 * Jquery
 * CSS
 * PostgreSQL Database
-
+* python
 ## Contact details.
 
 get me at deejaykayslyk@gmail.com
