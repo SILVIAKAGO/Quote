@@ -13,7 +13,7 @@ This is a Personal blog web application developed using flask framework and pyth
 ## Setup/Installation Requirements.
 
 * Python3.8
-* Postgresql installed
+* Postgresql installed.
 * clone the directory into your local machine
 * navigate to the cloned folder 
 * run `source virtual/bin/activate`
