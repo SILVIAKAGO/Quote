@@ -25,7 +25,7 @@ This is a Personal blog web application developed using flask framework and pyth
 
 NO known bugs as at the moment.
 
-## Technologies Used
+## Technologies Used.
 
 * Python
 * Flask
